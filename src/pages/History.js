@@ -21,16 +21,19 @@ export default function History() {
   const [show, setShow] = React.useState(false);
 
   const table = show ? (
-    <table cellpadding="5">
+    <table cellPadding="5">
       <tr>
         <th>timestamp (in epoch)</th>
         <th>asset symbol</th>
         <th>price</th>
       </tr>
       {history.map((e) => {
+        const date = new Date(e.timestamp);
         return (
           <tr>
-            <td>{e.timestamp}</td>
+            <td>
+              {date.toLocaleDateString() + " " + date.toLocaleTimeString()}
+            </td>
             <td>{e.assetSymbol}</td>
             <td>{e.price}</td>
           </tr>
