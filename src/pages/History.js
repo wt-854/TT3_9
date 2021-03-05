@@ -19,16 +19,27 @@ export default function History() {
     });
   };
 
-  getHistory();
+  const [show, setShow] = React.useState(false);
+
+  const table = show ? (
+    <ul>
+      table
+      {history.map((e) => {
+        <li>{e.price}</li>;
+      })}
+    </ul>
+  ) : null;
+
+  const handleClick = () => {
+    setShow(true);
+    getHistory();
+  };
 
   return (
     <div>
       <p>hi</p>
-      <ul>
-        {history.map((e) => {
-          <li>{e.price}</li>;
-        })}
-      </ul>
+      <button onClick={handleClick}>Retrieve history</button>
+      {table}
     </div>
   );
 }
