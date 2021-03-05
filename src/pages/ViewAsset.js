@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import Table from "react-bootstrap/Table";
 
 const ViewAsset = () => {
-  // take in accountKey later;
-
   let xapikey = "Jkx76CEYnp3NaTpwSXceo4ONDFLJNZcA717hzo1m";
   let viewAssetPriceUrl =
     "https://849rs099m3.execute-api.ap-southeast-1.amazonaws.com/techtrek/pricing/current";

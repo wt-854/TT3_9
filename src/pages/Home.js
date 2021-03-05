@@ -40,7 +40,7 @@ const Home = () => {
             </Card>
 
             <Card style={{ width: "18rem" }}>
-              <Link to={`/register`}>
+              <Link to={`/viewAsset`}>
                 <Card.Img src={"images/assets.png"} variant='top' />
               </Link>
               <Card.Body>
