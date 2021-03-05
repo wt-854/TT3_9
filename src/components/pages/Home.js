@@ -11,7 +11,7 @@ function Home() {
       <Navbar />
       {/* <HeroSection /> */}
       {/* <Cards /> */}
-      <h1>Welcome</h1>
+      <h1>Welcome User</h1>
       <Footer/>
     </>
   );
