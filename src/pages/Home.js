@@ -13,7 +13,7 @@ const Home = () => {
           <Row>
             <Card style={{ width: '18rem' }}>
               <Link to={`/viewinfo`}>
-                <Card.Img src={'images/img1.png'} variant='top' />
+                <Card.Img src={'images/bank.png'} variant='top' />
               </Link>
               <Card.Body>
                 <Link to={`/viewinfo`}>
@@ -27,21 +27,23 @@ const Home = () => {
 
             <Card style={{ width: '18rem' }}>
               <Link to={`/transaction`}>
-                <Card.Img src={'images/img1.png'} variant='top' />
+                <Card.Img src={'images/lock.png'} variant='top' />
               </Link>
               <Card.Body>
                 <Link to={`/transaction`}>
                   <Card.Title as='div'>
-                    <strong>View Transaction History</strong>
+                    <strong>Buy/Sell Assets</strong>
                   </Card.Title>
                 </Link>
-                <Card.Text as='div'>Transaction History</Card.Text>
+                <Card.Text as='div'>
+                  Buy and sell at the best bank in the world
+                </Card.Text>
               </Card.Body>
             </Card>
 
             <Card style={{ width: '18rem' }}>
               <Link to={`/viewAsset`}>
-                <Card.Img src={'images/assets.png'} variant='top' />
+                <Card.Img src={'images/bank_2.png'} variant='top' />
               </Link>
               <Card.Body>
                 <Link to={`/viewAsset`}>
@@ -56,7 +58,7 @@ const Home = () => {
           <Row>
             <Card style={{ width: '18rem' }}>
               <Link to={`/transactionHistory`}>
-                <Card.Img src={'images/img1.png'} variant='top' />
+                <Card.Img src={'images/atm.png'} variant='top' />
               </Link>
               <Card.Body>
                 <Link to={`/transactionHistory`}>
