@@ -21,7 +21,7 @@ function App() {
             component={() => <Login setCredentials={setCredentials} />}
           />
           <Route path='/register' component={Register} />
-          <Route path='/transaction' component={Transaction} />
+          <Route path='/transaction' component={ () => <Transaction credentials={credentials} />} />
           {/* add modules according */}
         </main>
       </BrowserRouter>

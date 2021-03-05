@@ -2,11 +2,13 @@ import React,{ useEffect, useState } from 'react';
 import { withRouter } from 'react-router-dom';
 import axios from 'axios';
 
-function Transact(props) {
+function Transact(credentials) {
     // Use it to store payload data
     const [trans, setTrans] = useState({});
     // Get price of asset
-    const [currentPrice, setCurrentPrice] = useState();
+    // const [currentPrice, setCurrentPrice] = useState();
+
+    const {accountKey} = credentials;
 
     useEffect(() => {
       const response = { status: 200 }
@@ -15,21 +17,20 @@ function Transact(props) {
       }
       
       setTrans({
-        accountKey: "3afbb5b2-9cb3-4013-bbc9-654e5921f6c3",
+        accountKey: accountKey,
         orderType: "",
         assetAmount: 0
       });
-    })
+    }, []);
 
-    // // Login and Logout
-    // const redirectToLogin = () => {
-    //     props.history.push('/');
-    //   }
+    // Login and Logout
+    const redirectToLogin = () => {
+        credentials.history.push('/');
+      }
 
-    // const logoutHandler = () => {
-    //   localStorage.removeItem('login_access_token');
-    //   redirectToLogin();
-    // }
+    const logoutHandler = () => {
+      redirectToLogin();
+    }
 
     // to get stock price
     // const getStockPrice = () => {
@@ -52,7 +53,6 @@ function Transact(props) {
                 throw new Error('Payload not posted!');
             }                
             console.log(res);
-            redirectToHome();
         })
         .catch(err => {
             console.log(err);
@@ -93,6 +93,7 @@ function Transact(props) {
         <div>
           <div>
             <div> <h5>Buy or Sell TTK </h5></div>
+            <button onClick={logoutHandler}>Logout!</button>
           </div>
           <form>
               <label for="price">Order Type: </label>
