@@ -14,7 +14,7 @@ export default function History() {
     }).then((response) => {
       response.json().then((body) => {
         console.log(body);
-        setHistory(body);
+        setHistory(body.reverse());
       });
     });
   };
@@ -22,12 +22,20 @@ export default function History() {
   const [show, setShow] = React.useState(false);
 
   const table = show ? (
-    <ul>
-      table
+    <table>
+      <tr>
+        <th>price</th>
+        <th>something else</th>
+      </tr>
       {history.map((e) => {
-        <li>{e.price}</li>;
+        return (
+          <tr>
+            <td>{e.price}</td>
+            <td>idk</td>
+          </tr>
+        );
       })}
-    </ul>
+    </table>
   ) : null;
 
   const handleClick = () => {
