@@ -49,7 +49,6 @@ export default function History() {
 
   return (
     <div>
-      <p>hi</p>
       <button onClick={handleClick}>
         {show ? "Update" : "Retrieve"} history
       </button>
