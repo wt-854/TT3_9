@@ -40,16 +40,16 @@ const Home = () => {
             </Card>
 
             <Card style={{ width: "18rem" }}>
-              <Link to={`/register`}>
-                <Card.Img src={"images/img1.png"} variant='top' />
+              <Link to={`/viewAsset`}>
+                <Card.Img src={"images/assets.png"} variant='top' />
               </Link>
               <Card.Body>
-                <Link to={`/register`}>
+                <Link to={`/viewAsset`}>
                   <Card.Title as='div'>
-                    <strong>Module3</strong>
+                    <strong>View Assets</strong>
                   </Card.Title>
                 </Link>
-                <Card.Text as='div'>Description for module 3</Card.Text>
+                <Card.Text as='div'>View Current Price of TTK</Card.Text>
               </Card.Body>
             </Card>
           </Row>
