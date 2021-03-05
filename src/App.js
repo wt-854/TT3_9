@@ -4,14 +4,9 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import Nav from './components/Nav';
 import Home from './pages/Home';
 import Login from './pages/Login';
-<<<<<<< HEAD
-import Register from './pages/Register';
-import Transaction from "./pages/Transaction";
-import Module1 from './pages/Module1';
-=======
->>>>>>> origin
 import ViewAsset from './pages/ViewAsset';
 import Info from './pages/Info';
+import Transaction from'./pages/Transaction';
 import History from './pages/History';
 
 function App() {
@@ -32,7 +27,6 @@ function App() {
             path='/viewinfo'
             component={() => <Info credentials={credentials} />}
           />
-          <Route path='/register' component={Register} />
           <Route path='/transaction' component={ () => <Transaction credentials={credentials} />} />
           <Route path='/history' component={History} />
           <Route path='/viewAsset' component={() => <ViewAsset />} />
