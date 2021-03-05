@@ -81,9 +81,11 @@ function Transact(credentials) {
     //             'x-api-key': `Jkx76CEYnp3NaTpwSXceo4ONDFLJNZcA717hzo1m`
     //         } 
     //     })
-    //         .then(res => setStockData(res)
+    //         .then(res => setCurrentPrice(res)
     //         .catch(err => console.log(err))
     // }
+
+
     // <button onClick={logoutHandler}>Logout!</button>
     // <div> Balance: ${balance}</div>
     // <small>Current Price: ${currentAssetPrice}</small>
