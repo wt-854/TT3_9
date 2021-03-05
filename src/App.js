@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Module1 from "./pages/Module1";
+import ViewAsset from "./pages/ViewAsset";
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
           <Route path='/login' component={Login} />
           <Route path='/register' component={Register} />
           <Route path='/module1' component={Module1} />
+          <Route path='/viewPrice' component={ViewAsset} />
+
           {/* add modules according */}
         </main>
       </BrowserRouter>
