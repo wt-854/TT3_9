@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
+// import FormControlLabel from '@material-ui/core/FormControlLabel';
+// import Checkbox from '@material-ui/core/Checkbox';
 import Link from '@material-ui/core/Link';
-import Grid from '@material-ui/core/Grid';
+// import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
@@ -48,6 +48,29 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Login() {
   const classes = useStyles();
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const requestBody = { username, password };
+
+    fetch(
+      'https://849rs099m3.execute-api.ap-southeast-1.amazonaws.com/techtrek/login',
+      {
+        method: 'POST',
+        headers: {
+          'x-api-key': 'Jkx76CEYnp3NaTpwSXceo4ONDFLJNZcA717hzo1m',
+        },
+        body: JSON.stringify(requestBody),
+      }
+    ).then((response) => {
+      response.json().then((body) => {
+        console.log(body);
+      });
+    });
+  };
 
   return (
     <Container component='main' maxWidth='xs'>
@@ -59,17 +82,18 @@ export default function Login() {
         <Typography component='h1' variant='h5'>
           Sign in
         </Typography>
-        <form className={classes.form} noValidate>
+        <form className={classes.form} noValidate onSubmit={handleSubmit}>
           <TextField
             variant='outlined'
             margin='normal'
             required
             fullWidth
             id='email'
-            label='Email Address'
-            name='email'
-            autoComplete='email'
+            label='Username'
+            name='username'
+            autoComplete='username'
             autoFocus
+            onChange={(e) => setUsername(e.target.value)}
           />
           <TextField
             variant='outlined'
@@ -81,6 +105,7 @@ export default function Login() {
             type='password'
             id='password'
             autoComplete='current-password'
+            onChange={(e) => setPassword(e.target.value)}
           />
           {/* <FormControlLabel
             control={<Checkbox value='remember' color='primary' />}
