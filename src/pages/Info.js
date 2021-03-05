@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Info({}) {
+export default function Info({ credentials }) {
   const info = {
     // for testing
     accountKey: "acctkey",
@@ -11,7 +11,14 @@ export default function Info({}) {
     phoneNumber: "pno",
     email: "test@123.com",
   };
-  const { firstName, lastName, nric, address, phoneNumber, email } = info;
+  const {
+    firstName,
+    lastName,
+    nric,
+    address,
+    phoneNumber,
+    email,
+  } = credentials;
   return (
     <div>
       <p>Hello {firstName}, here is your user information:</p>
