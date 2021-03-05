@@ -29,14 +29,11 @@ function App() {
             component={() => <Info credentials={credentials} />}
           />
           <Route path='/register' component={Register} />
-<<<<<<< HEAD
           <Route path='/transaction' component={ () => <Transaction credentials={credentials} />} />
-=======
           <Route path='/history' component={History} />
           <Route path='/module1' component={Module1} />
           <Route path='/viewAsset' component={() => <ViewAsset />} />
 
->>>>>>> origin
           {/* add modules according */}
         </main>
       </BrowserRouter>
