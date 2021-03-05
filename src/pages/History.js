@@ -13,22 +13,47 @@ export default function History() {
       headers: { "x-api-key": xapikey },
     }).then((response) => {
       response.json().then((body) => {
-        console.log(body);
-        setHistory(body);
+        setHistory(body.reverse());
       });
     });
   };
 
-  getHistory();
+  const [show, setShow] = React.useState(false);
+
+  const table = show ? (
+    <table cellPadding="5">
+      <tr>
+        <th>timestamp (in epoch)</th>
+        <th>asset symbol</th>
+        <th>price</th>
+      </tr>
+      {history.map((e) => {
+        const date = new Date(e.timestamp);
+        return (
+          <tr>
+            <td>
+              {date.toLocaleDateString() + " " + date.toLocaleTimeString()}
+            </td>
+            <td>{e.assetSymbol}</td>
+            <td>{e.price}</td>
+          </tr>
+        );
+      })}
+    </table>
+  ) : null;
+
+  const handleClick = () => {
+    setShow(true);
+    getHistory();
+  };
 
   return (
     <div>
       <p>hi</p>
-      <ul>
-        {history.map((e) => {
-          <li>{e.price}</li>;
-        })}
-      </ul>
+      <button onClick={handleClick}>
+        {show ? "Update" : "Retrieve"} history
+      </button>
+      {table}
     </div>
   );
 }
