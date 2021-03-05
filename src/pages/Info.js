@@ -15,32 +15,19 @@ export default function Info({}) {
   return (
     <div>
       <p>Hello {firstName}, here is your user information:</p>
-      <table margin-left="10px" margin-right="auto">
-        <tr>
-          <th>First Name</th>
-          <td>{firstName}</td>
-        </tr>
-        <tr>
-          <th>Last Name</th>
-          <td>{lastName}</td>
-        </tr>
-        <tr>
-          <th>NRIC</th>
-          <td>{nric}</td>
-        </tr>
-        <tr>
-          <th>Address</th>
-          <td>{address}</td>
-        </tr>
-        <tr>
-          <th>Phone Number</th>
-          <td>{phoneNumber}</td>
-        </tr>
-        <tr>
-          <th>Email</th>
-          <td>{email}</td>
-        </tr>
-      </table>
+      <div>
+        First Name: {firstName}
+        <br />
+        Last Name: {lastName}
+        <br />
+        NRIC: {nric}
+        <br />
+        Address: {address}
+        <br />
+        Phone Number: {phoneNumber}
+        <br />
+        Email: {email}
+      </div>
     </div>
   );
 }
