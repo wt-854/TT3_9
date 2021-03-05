@@ -4,7 +4,7 @@ import Nav from "./components/Nav";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import Module1 from "./pages/Module1";
+import Transaction from "./pages/Transaction";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
           <Route path='/' exact component={Home} />
           <Route path='/login' component={Login} />
           <Route path='/register' component={Register} />
-          <Route path='/module1' component={Module1} />
+          <Route path='/transaction' component={Transaction} />
           {/* add modules according */}
         </main>
       </BrowserRouter>
