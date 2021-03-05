@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Card from "react-bootstrap/Card";
-import { Container, Row } from "react-bootstrap";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Card from 'react-bootstrap/Card';
+import { Container, Row } from 'react-bootstrap';
 
 const Home = () => {
   return (
@@ -11,23 +11,23 @@ const Home = () => {
         {/* rename modules according */}
         <Container>
           <Row>
-            <Card style={{ width: "18rem" }}>
-              <Link to={`/module1`}>
-                <Card.Img src={"images/img1.png"} variant='top' />
+            <Card style={{ width: '18rem' }}>
+              <Link to={`/viewinfo`}>
+                <Card.Img src={'images/img1.png'} variant='top' />
               </Link>
               <Card.Body>
-                <Link to={`/module1`}>
+                <Link to={`/viewinfo`}>
                   <Card.Title as='div'>
-                    <strong>Module1</strong>
+                    <strong>Info</strong>
                   </Card.Title>
                 </Link>
-                <Card.Text as='div'>Description for module 1</Card.Text>
+                <Card.Text as='div'>View user information</Card.Text>
               </Card.Body>
             </Card>
 
-            <Card style={{ width: "18rem" }}>
+            <Card style={{ width: '18rem' }}>
               <Link to={`/register`}>
-                <Card.Img src={"images/img1.png"} variant='top' />
+                <Card.Img src={'images/img1.png'} variant='top' />
               </Link>
               <Card.Body>
                 <Link to={`/register`}>
@@ -39,9 +39,9 @@ const Home = () => {
               </Card.Body>
             </Card>
 
-            <Card style={{ width: "18rem" }}>
+            <Card style={{ width: '18rem' }}>
               <Link to={`/viewAsset`}>
-                <Card.Img src={"images/assets.png"} variant='top' />
+                <Card.Img src={'images/assets.png'} variant='top' />
               </Link>
               <Card.Body>
                 <Link to={`/viewAsset`}>
@@ -54,9 +54,9 @@ const Home = () => {
             </Card>
           </Row>
           <Row>
-            <Card style={{ width: "18rem" }}>
+            <Card style={{ width: '18rem' }}>
               <Link to={`/register`}>
-                <Card.Img src={"images/img1.png"} variant='top' />
+                <Card.Img src={'images/img1.png'} variant='top' />
               </Link>
               <Card.Body>
                 <Link to={`/register`}>
@@ -68,9 +68,9 @@ const Home = () => {
               </Card.Body>
             </Card>
 
-            <Card style={{ width: "18rem" }}>
+            <Card style={{ width: '18rem' }}>
               <Link to={`/register`}>
-                <Card.Img src={"images/img1.png"} variant='top' />
+                <Card.Img src={'images/img1.png'} variant='top' />
               </Link>
               <Card.Body>
                 <Link to={`/register`}>
@@ -82,9 +82,9 @@ const Home = () => {
               </Card.Body>
             </Card>
 
-            <Card style={{ width: "18rem" }}>
+            <Card style={{ width: '18rem' }}>
               <Link to={`/register`}>
-                <Card.Img src={"images/img1.png"} variant='top' />
+                <Card.Img src={'images/img1.png'} variant='top' />
               </Link>
               <Card.Body>
                 <Link to={`/register`}>
