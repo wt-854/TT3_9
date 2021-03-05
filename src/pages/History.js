@@ -13,7 +13,6 @@ export default function History() {
       headers: { "x-api-key": xapikey },
     }).then((response) => {
       response.json().then((body) => {
-        console.log(body);
         setHistory(body.reverse());
       });
     });
@@ -22,16 +21,18 @@ export default function History() {
   const [show, setShow] = React.useState(false);
 
   const table = show ? (
-    <table>
+    <table cellpadding="5">
       <tr>
+        <th>timestamp (in epoch)</th>
+        <th>asset symbol</th>
         <th>price</th>
-        <th>something else</th>
       </tr>
       {history.map((e) => {
         return (
           <tr>
+            <td>{e.timestamp}</td>
+            <td>{e.assetSymbol}</td>
             <td>{e.price}</td>
-            <td>idk</td>
           </tr>
         );
       })}
@@ -46,7 +47,9 @@ export default function History() {
   return (
     <div>
       <p>hi</p>
-      <button onClick={handleClick}>Retrieve history</button>
+      <button onClick={handleClick}>
+        {show ? "Update" : "Retrieve"} history
+      </button>
       {table}
     </div>
   );
