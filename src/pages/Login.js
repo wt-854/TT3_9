@@ -18,7 +18,7 @@ function Copyright() {
     <Typography variant='body2' color='textSecondary' align='center'>
       {'Copyright © '}
       <Link color='inherit' href='https://material-ui.com/'>
-        Your Website
+        DBS Tech Trek Group 9
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -82,10 +82,10 @@ export default function Login() {
             id='password'
             autoComplete='current-password'
           />
-          <FormControlLabel
+          {/* <FormControlLabel
             control={<Checkbox value='remember' color='primary' />}
             label='Remember me'
-          />
+          /> */}
           <Button
             type='submit'
             fullWidth
@@ -95,7 +95,7 @@ export default function Login() {
           >
             Sign In
           </Button>
-          <Grid container>
+          {/* <Grid container>
             <Grid item xs>
               <Link href='#' variant='body2'>
                 Forgot password?
@@ -106,7 +106,7 @@ export default function Login() {
                 {"Don't have an account? Sign Up"}
               </Link>
             </Grid>
-          </Grid>
+          </Grid> */}
         </form>
       </div>
       <Box mt={8}>
