@@ -15,7 +15,6 @@ function CashWallet() {
         }, 
         {headers: {
             'Content-Type': 'application/json;charset=UTF-8',
-            // "Access-Control-Allow-Origin": "*",
             "X-Api-key": "Jkx76CEYnp3NaTpwSXceo4ONDFLJNZcA717hzo1m"}})
         .then((response) => {
             console.log(response.data);
@@ -39,7 +38,7 @@ function CashWallet() {
                     Cash Balance: $ {cashBalance}
                 </div>
         </div>
-        <button className="button" onClick={fetchbal}>Get Details</button>
+        <button className="button" onClick={fetchbal}>Get Balance</button>
         <Footer/>
         </>
     );
