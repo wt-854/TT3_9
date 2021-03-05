@@ -17,7 +17,7 @@ function App() {
           <Route path='/login' component={Login} />
           <Route path='/register' component={Register} />
           <Route path='/module1' component={Module1} />
-          <Route path='/viewPrice' component={ViewAsset} />
+          <Route path='/viewAsset' component={ViewAsset} />
 
           {/* add modules according */}
         </main>

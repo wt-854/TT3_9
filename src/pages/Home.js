@@ -41,10 +41,10 @@ const Home = () => {
 
             <Card style={{ width: "18rem" }}>
               <Link to={`/register`}>
-                <Card.Img src={"images/img1.png"} variant='top' />
+                <Card.Img src={"images/assets.png"} variant='top' />
               </Link>
               <Card.Body>
-                <Link to={`/viewPrice`}>
+                <Link to={`/viewAsset`}>
                   <Card.Title as='div'>
                     <strong>View Assets</strong>
                   </Card.Title>
