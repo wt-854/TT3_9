@@ -9,6 +9,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import { useHistory } from 'react-router';
 
 function Copyright() {
   return (
@@ -48,6 +49,7 @@ export default function Login({ setCredentials }) {
   const classes = useStyles();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const history = useHistory();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -63,12 +65,27 @@ export default function Login({ setCredentials }) {
         },
         body: JSON.stringify(requestBody),
       }
-    ).then((response) => {
-      response.json().then((body) => {
-        setCredentials(body);
-        // console.log(body);
+    )
+      .then((response) => {
+        switch (response.status) {
+          case 200:
+            response.json().then((body) => {
+              setCredentials(body);
+            });
+
+            history.push({
+              pathname: '/viewinfo',
+            });
+            break;
+
+          default:
+            alert('Wrong username or password.');
+        }
+      })
+      .catch((error) => {
+        console.log(`Authentication error: ${error}`);
+        alert('Wrong username or password.');
       });
-    });
   };
 
   return (

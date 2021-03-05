@@ -6,6 +6,10 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Transaction from "./pages/Transaction";
+import Module1 from './pages/Module1';
+import ViewAsset from './pages/ViewAsset';
+import Info from './pages/Info';
+import History from './pages/History';
 
 function App() {
   const [credentials, setCredentials] = useState({});
@@ -20,8 +24,19 @@ function App() {
             path='/login'
             component={() => <Login setCredentials={setCredentials} />}
           />
+          <Route
+            path='/viewinfo'
+            component={() => <Info credentials={credentials} />}
+          />
           <Route path='/register' component={Register} />
+<<<<<<< HEAD
           <Route path='/transaction' component={ () => <Transaction credentials={credentials} />} />
+=======
+          <Route path='/history' component={History} />
+          <Route path='/module1' component={Module1} />
+          <Route path='/viewAsset' component={() => <ViewAsset />} />
+
+>>>>>>> origin
           {/* add modules according */}
         </main>
       </BrowserRouter>
